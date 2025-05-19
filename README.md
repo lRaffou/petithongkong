@@ -86,3 +86,5 @@ Solution : configurer ESLint en local.
     Next.js va générer un fichier .eslintrc.json et installer ce qu’il faut.
 
 J'ai ajouté aussi Prettier au package.json, pour formater le code. (npm run format)
+
+La pipeline m'a signalé des variables inutilisées, j'avais supprimé les polices de base next.js. (j'ai supprimé l'import et la constante dans layout)
