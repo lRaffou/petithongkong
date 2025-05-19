@@ -54,3 +54,8 @@ Mise en place de next.js
 J'ai créé une Header, Footer, About et Contact pour faire des premiers tests. C'est responsive oui, mais le menu burger n'est pas automatiquement créé. (à faire)
 
 Pour une page, il faut son dossier avec sa page dédiée à l'intérieur. Pour les composants pas besoin. (directement les pages dans dans le dossier)
+
+## Création du pipeline avec github.
+
+J'ai créé une nouvelle branche pour installer une pipeline avec github. (pipeline-github)
+
