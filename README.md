@@ -38,3 +38,19 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 # petithongkong
  f6428f00e15fb550337a0910b8fc9da9fa08e695
+
+
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+#### Initialisation du projet.
+
+Mise en place de next.js
+
+## Premier test perso.
+
+J'ai créé une Header, Footer, About et Contact pour faire des premiers tests. C'est responsive oui, mais le menu burger n'est pas automatiquement créé. (à faire)
+
+Pour une page, il faut son dossier avec sa page dédiée à l'intérieur. Pour les composants pas besoin. (directement les pages dans dans le dossier)
