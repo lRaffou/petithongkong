@@ -45,6 +45,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
+ # **Badge "build passing" >** [![CI - Next.js](https://github.com/lRaffou/petithongkong/actions/workflows/ci.yml/badge.svg)](https://github.com/lRaffou/petithongkong/actions)
+
 #### Initialisation du projet.
 
 Mise en place de next.js
@@ -88,3 +90,5 @@ Solution : configurer ESLint en local.
 J'ai ajouté aussi Prettier au package.json, pour formater le code. (npm run format)
 
 La pipeline m'a signalé des variables inutilisées, j'avais supprimé les polices de base next.js. (j'ai supprimé l'import et la constante dans layout)
+
+*J'y est ajouter un badge "Build passing" au README.*
