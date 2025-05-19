@@ -59,3 +59,30 @@ Pour une page, il faut son dossier avec sa page dédiée à l'intérieur. Pour l
 
 J'ai créé une nouvelle branche pour installer une pipeline avec github. (pipeline-github)
 
+Pipeline CI Github vérifie le code à chaque **push**
+
+**Ce que cette pipeline va faire automatiquement :**
+
+📥 Cloner le dépôt
+
+📦 Installer les dépendances (npm install)
+
+🔍 Lancer npm run lint (ESLint)
+
+🛠️ Construire le projet (npm run build)
+
+Création de *.github/workflows/ci.yml* et sont contenu.
+
+Après avoir testé la pipeline sur github j'ai eu une erreur :
+
+    🔍 Run ESLint
+    Process completed with exit code 1.
+
+**Evaluation et correction de problème :**
+
+*Ce que tu vois est très clair : la première exécution de next lint dans la pipeline déclenche le configurateur interactif d’ESLint, car tu ne l’as pas encore configuré localement.*
+
+Solution : configurer ESLint en local.
+    Next.js va générer un fichier .eslintrc.json et installer ce qu’il faut.
+
+    
