@@ -37,15 +37,15 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 # petithongkong
- f6428f00e15fb550337a0910b8fc9da9fa08e695
 
+f6428f00e15fb550337a0910b8fc9da9fa08e695
 
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
- # **Badge "build passing" >** [![CI - Next.js](https://github.com/lRaffou/petithongkong/actions/workflows/ci.yml/badge.svg)](https://github.com/lRaffou/petithongkong/actions)
+# **Badge "build passing" >** [![CI - Next.js](https://github.com/lRaffou/petithongkong/actions/workflows/ci.yml/badge.svg)](https://github.com/lRaffou/petithongkong/actions)
 
 #### Initialisation du projet.
 
@@ -73,7 +73,7 @@ Pipeline CI Github vérifie le code à chaque **push**
 
 🛠️ Construire le projet (npm run build)
 
-Création de *.github/workflows/ci.yml* et sont contenu.
+Création de _.github/workflows/ci.yml_ et sont contenu.
 
 Après avoir testé la pipeline sur github j'ai eu une erreur :
 
@@ -82,13 +82,13 @@ Après avoir testé la pipeline sur github j'ai eu une erreur :
 
 **Evaluation et correction de problème :**
 
-*Ce que tu vois est très clair : la première exécution de next lint dans la pipeline déclenche le configurateur interactif d’ESLint, car tu ne l’as pas encore configuré localement.*
+_Ce que tu vois est très clair : la première exécution de next lint dans la pipeline déclenche le configurateur interactif d’ESLint, car tu ne l’as pas encore configuré localement._
 
 Solution : configurer ESLint en local.
-    Next.js va générer un fichier .eslintrc.json et installer ce qu’il faut.
+Next.js va générer un fichier .eslintrc.json et installer ce qu’il faut.
 
 J'ai ajouté aussi Prettier au package.json, pour formater le code. (npm run format)
 
 La pipeline m'a signalé des variables inutilisées, j'avais supprimé les polices de base next.js. (j'ai supprimé l'import et la constante dans layout)
 
-*J'y est ajouter un badge "Build passing" au README.*
+_J'y est ajouter un badge "Build passing" au README._
