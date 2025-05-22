@@ -1,6 +1,6 @@
 {
   "extends": [
-    "next/core-web-vitals",
+    "next/strict",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier"
@@ -17,10 +17,5 @@
     "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
     "react/react-in-jsx-scope": "off"
   },
-  "ignorePatterns": [
-    ".next/",
-    "node_modules/",
-    "public/",
-    "out/"
-  ]
+  "ignorePatterns": [".next/", "node_modules/", "public/", "out/"]
 }
