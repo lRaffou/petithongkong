@@ -10,6 +10,9 @@ jobs:
   checkout:
     name: 📥 Checkout code
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./petithongkong
 
     steps:
       - name: 📥 Checkout code
@@ -27,6 +30,9 @@ jobs:
   lint:
     name: 🔍 Lint (ESLint + Prettier)
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./petithongkong
     needs: checkout
 
     steps:
@@ -39,6 +45,9 @@ jobs:
   test:
     name: 🧪 Tests
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./petithongkong
     needs: [checkout, lint]
 
     steps:
