@@ -8,11 +8,8 @@ on:
 
 jobs:
   checkout:
-    name: 📥 Checkout code
+    name: 📥 Checkout + Install
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./petithongkong
 
     steps:
       - name: 📥 Checkout code
@@ -27,15 +24,25 @@ jobs:
       - name: 📦 Install dependencies
         run: npm ci
 
+      - name: 📦 Upload prepared project
+        uses: actions/upload-artifact@v4
+        with:
+          name: source
+          path: .
+          retention-days: 1
+
   lint:
     name: 🔍 Lint (ESLint + Prettier)
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./petithongkong
     needs: checkout
 
     steps:
+      - name: 🔍 Download prepared project
+        uses: actions/download-artifact@v4
+        with:
+          name: source
+          path: .
+
       - name: 🧹 Run ESLint
         run: npm run lint
 
@@ -45,12 +52,15 @@ jobs:
   test:
     name: 🧪 Tests
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./petithongkong
     needs: [checkout, lint]
 
     steps:
+      - name: 🔍 Download prepared project
+        uses: actions/download-artifact@v4
+        with:
+          name: source
+          path: .
+
       - name: 🧪 Run test script
         run: npm test
 
@@ -60,5 +70,11 @@ jobs:
     needs: [checkout, lint, test]
 
     steps:
+      - name: 🔍 Download prepared project
+        uses: actions/download-artifact@v4
+        with:
+          name: source
+          path: .
+
       - name: 🛠️ Build the app
         run: npm run build
