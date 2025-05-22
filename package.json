@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "petithongkong",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +18,7 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.27.0",
     "@next/eslint-plugin-next": "^15.3.2",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
