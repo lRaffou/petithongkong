@@ -21,14 +21,16 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - name: 📦 Install dependencies
-        run: npm ci
-
       - name: 📦 Upload prepared project
         uses: actions/upload-artifact@v4
         with:
           name: source
-          path: .
+          path: |
+            .
+            !node_modules/
+            !.git/
+            !.github/
+            !.vscode/
           retention-days: 1
 
   lint:
@@ -42,6 +44,9 @@ jobs:
         with:
           name: source
           path: .
+
+      - name: 📦 Install dependencies
+        run: npm ci
 
       - name: 🧹 Run ESLint
         run: npm run lint
@@ -61,6 +66,9 @@ jobs:
           name: source
           path: .
 
+      - name: 📦 Install dependencies
+        run: npm ci
+
       - name: 🧪 Run test script
         run: npm test
 
@@ -75,6 +83,9 @@ jobs:
         with:
           name: source
           path: .
+
+      - name: 📦 Install dependencies
+        run: npm ci
 
       - name: 🛠️ Build the app
         run: npm run build
