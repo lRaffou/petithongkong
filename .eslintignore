@@ -1,9 +1,7 @@
 node_modules
 .next
-public
 out
-*.svg
-*.png
+public
 *.config.js
 *.config.cjs
 *.config.mjs

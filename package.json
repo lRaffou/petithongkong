@@ -1,38 +1,27 @@
 {
-  "type": "module",
   "name": "petithongkong",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint .",
+    "lint": "eslint .",
     "format": "prettier --check .",
-    "format:fix": "prettier --write .",
-    "test": "echo \"Aucun test encore 👀\" && exit 0"
-  },
-  "dependencies": {
-    "next": "15.3.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "format:fix": "prettier --write ."
   },
   "devDependencies": {
     "@eslint/js": "^9.27.0",
-    "@next/eslint-plugin-next": "^15.3.2",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@typescript-eslint/eslint-plugin": "^8.32.1",
-    "@typescript-eslint/parser": "^8.32.1",
+    "@next/eslint-plugin-next": "^15.1.8",
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.5",
     "eslint": "^9.27.0",
-    "eslint-config-next": "15.3.2",
-    "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-prettier": "^5.4.0",
     "prettier": "^3.5.3",
-    "tailwindcss": "^4",
-    "typescript": "^5",
+    "typescript": "^5.8.3",
     "typescript-eslint": "^8.32.1"
+  },
+  "dependencies": {
+    "next": "^15.1.8",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }
